@@ -4,30 +4,39 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pixels Art Project</title>
+  <link rel="icon" href="https://img.icons8.com/plasticine/100/000000/heat-map.png" >
+  <title>Pixels Art</title>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
   <h1 id='title'>Paleta de Cores</h1>
-  <div id='color-palette'>
-    <div id = 'black' class='color'></div>
-    <div id = 'blue' class='color'></div>
-    <div id = 'red' class='color'></div>
-    <div id = 'green' class='color'></div>
 
-  </div>
+  <section>
+    <div id='color-palette'>
+      <div id = 'black' class='color'></div>
+      <div id = 'blue' class='color'></div>
+      <div id = 'red' class='color'></div>
+      <div id = 'green' class='color'></div>
+      <div id = 'white' class='color'></div>
+      <div id = 'aleatoria1' class='color'></div>
+      <div id = 'aleatoria2' class='color'></div>
+      <div id = 'aleatoria3' class='color'></div>
+    </div>
+  </section>
 
   <section id='buttons'>
 
-    <button id='clear-board' >Limpar</button>
+    <button class="margin" id='clear-board'>Limpar</button>
 
-    <input id='board-size' type='number' max='50' min='1'>
+    <input class="margin" placeholder="pixels" id='board-size' type='number' max='50' min='1'>
 
-    <button id='generate-board'>VQV</button>
+    <button class="margin" id='generate-board'>Definir Pixels</button>
+
+    <button class="margin" id="buttonGenerate">Gerar novas cores</button>
 
   </section>
 
-  <table id='pixel-board'></table>
+  <section><table id='pixel-board'></table></section>
  
   <script type="text/javascript" src="script.js"></script>
 </body>

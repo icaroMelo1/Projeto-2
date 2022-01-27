@@ -36,7 +36,7 @@ function req4() {
     alert('Board inválido!');
     number = 5;
   }  
-  if (document.querySelector('#board-size').value > 50  ){
+  if (document.querySelector('#board-size').value > 30  ){
     alert('Board inválido!');
     number = 50;
   }
@@ -57,17 +57,36 @@ function req4() {
 }
 req4();
 
-window.onload = function(){
-  let corrigir = document.querySelectorAll('.color');
+const createColor = () => {
+  let colors = document.querySelectorAll('.color');
 
-  corrigir[0].style.backgroundColor = 'black';
-  corrigir[1].style.backgroundColor = `rgb(${(Math.random() * 256)}, ${(Math.random() * 256)}, ${(Math.random() * 256)}, ${(Math.random() * 256)})`;
-  corrigir[2].style.backgroundColor = `rgb(${(Math.random() * 256)}, ${(Math.random() * 256)}, ${(Math.random() * 256)}, ${(Math.random() * 256)})`;
-  corrigir[3].style.backgroundColor = `rgb(${(Math.random() * 256)}, ${(Math.random() * 256)}, ${(Math.random() * 256)}, ${(Math.random() * 256)})`;
+  colors[0].style.backgroundColor = 'black';
+  colors[1].style.backgroundColor = 'blue';
+  colors[2].style.backgroundColor = 'red';
+  colors[3].style.backgroundColor = 'green';
+  colors[4].style.backgroundColor = 'white';
+  colors[5].style.backgroundColor = `rgb(${(Math.random() * 256)}, ${(Math.random() * 256)}, ${(Math.random() * 256)}, ${(Math.random() * 256)})`;
+  colors[6].style.backgroundColor = `rgb(${(Math.random() * 256)}, ${(Math.random() * 256)}, ${(Math.random() * 256)}, ${(Math.random() * 256)})`;
+  colors[7].style.backgroundColor = `rgb(${(Math.random() * 256)}, ${(Math.random() * 256)}, ${(Math.random() * 256)}, ${(Math.random() * 256)})`;
 
   let blackcolor = document.querySelector('#black');
   blackcolor.classList.add('selected'); 
+}
 
+
+const buttonGenerateColor = () => {
+  const button = document.querySelector('#buttonGenerate');
+  button.addEventListener('click', () => {
+    const colors = document.querySelectorAll('.color');
+    colors[5].style.backgroundColor = `rgb(${(Math.random() * 256)}, ${(Math.random() * 256)}, ${(Math.random() * 256)}, ${(Math.random() * 256)})`;
+    colors[6].style.backgroundColor = `rgb(${(Math.random() * 256)}, ${(Math.random() * 256)}, ${(Math.random() * 256)}, ${(Math.random() * 256)})`;
+    colors[7].style.backgroundColor = `rgb(${(Math.random() * 256)}, ${(Math.random() * 256)}, ${(Math.random() * 256)}, ${(Math.random() * 256)})`;  
+  });
+}
+
+window.onload = function(){
+  createColor();
+  buttonGenerateColor();
 }
 
 function req7() {

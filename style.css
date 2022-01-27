@@ -1,6 +1,7 @@
 body{
-  background-color: royalblue;
+  background-color: #f7ebeb;
 }
+
 .color {
   border: solid black 1px;
   width: 50px;
@@ -11,11 +12,15 @@ body{
 }
 
 #pixel-board{
+  margin-top: 1%;
+  background-color: grey;
   display: table;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 5px solid grey;
 }
 
 #color-palette {
-  
   width: 223.4px;
 }
 
@@ -27,10 +32,21 @@ body{
   background-color: white;
   color: white;
   margin: 3px 3px 3px 3px;
- 
 }
 
 #color-palette {
   background-color: solid white;
 }
 
+#buttons, #title, section {
+  display: flex;
+  justify-content: center;
+}
+
+#buttons {
+  margin-top: 1%;
+}
+
+.margin {
+  margin-left: 4px;
+}
